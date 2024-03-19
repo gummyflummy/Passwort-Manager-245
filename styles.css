@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #000;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e8991a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+.overwatch-button {
+    font-family: 'Overwatch', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    background-color: #120f0b; /* Orange */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    outline: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Schatten hinzufügen */
+    transition: all 0.3s ease;
+    animation: shake 0.5s infinite alternate; /* Zittern-Effekt */
+}
+
+
+.overwatch-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transform: translate(-50%, -75%) rotate(45deg); /* Position des Glanzlichts */
+    z-index: -1;
+}
+
+.overwatch-button:hover::after {
+    opacity: 1;
+}
+
+
+.overwatch-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent 20%, #fff 40%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.overwatch-button:active::before {
+    opacity: 1;
+    animation: laser 0.5s linear;
+}
+
+@keyframes laser {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+.overwatch-button.clicked {
+    transform: scale(0.95);
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+
+.overwatch-icon {
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
