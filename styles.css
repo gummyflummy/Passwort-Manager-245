@@ -35,7 +35,7 @@ p {
     font-family: 'Overwatch', sans-serif;
     font-size: 24px;
     color: #fff;
-    background-color: #120f0b; /* Orange */
+    background-color: #120f0b; 
     border: none;
     padding: 15px 30px;
     border-radius: 50px;
@@ -45,9 +45,9 @@ p {
     overflow: hidden;
     z-index: 1;
     outline: none;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Schatten hinzufügen */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
     transition: all 0.3s ease;
-    animation: shake 0.5s infinite alternate; /* Zittern-Effekt */
+    animation: shake 0.5s infinite alternate; 
 }
 
 
@@ -61,7 +61,7 @@ p {
     background: rgba(255, 255, 255, 0.3);
     opacity: 0;
     transition: opacity 0.5s ease;
-    transform: translate(-50%, -75%) rotate(45deg); /* Position des Glanzlichts */
+    transform: translate(-50%, -75%) rotate(45deg); 
     z-index: -1;
 }
 
